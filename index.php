@@ -3,7 +3,7 @@
 
 // Include the config file for the database credentials - this is in the Database class
 // require_once "config.php";
-require_once "database.php";
+require_once "core/database.php";
 
 // Instantiate the Database class
 $database = new Database();
