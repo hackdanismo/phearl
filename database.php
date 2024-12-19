@@ -7,11 +7,15 @@ class Database {
     private $conn;
 
     // Constructor initializes and creates the connection to the database
-    public function __construct($host = DB_HOSTNAME, $dbName = DB_DATABASE, $username = DB_USERNAME, $password = DB_PASSWORD) {
-        $this->host = $host;
-        $this->dbName = $dbName;
-        $this->username = $username;
-        $this->password = $password;
+    public function __construct($host = null, $dbName = null, $username = null, $password = null) {
+        // Include the configuration file with the database credentials
+        require_once "config.php";
+
+        // Use provided parameters or fallback to constants from the configuration file
+        $this->host = $host ?? DB_HOSTNAME;
+        $this->dbName = $dbName ?? DB_DATABASE;
+        $this->username = $username ?? DB_USERNAME;
+        $this->password = $password ?? DB_PASSWORD;
 
         $this->conn = null;
 
