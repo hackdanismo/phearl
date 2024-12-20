@@ -34,7 +34,7 @@ class Database {
     }
 
     // Public method to retrieve the active database connection without exposing the credentials
-    public function getConnection() {
+    public function connect() {
         // Return the PDO connection object
         return $this->conn;
     }
