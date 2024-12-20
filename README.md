@@ -14,7 +14,10 @@ const DB_DATABASE = "";
 We can pass these credentials when creating a new instance of the Database, instead of using the configuration file:
 
 ```php
+// Instantiate the Database class
 $database = new Database("localhost", "databaseName", "username", "password");
+// Connect to the database
+$database->connect();
 ```
 
 If we don't provide any parameters, the constructor in the `Database` class will fall back to using the constants (`DB_HOSTNAME`, `DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`) from the configuration file.
