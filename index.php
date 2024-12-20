@@ -9,6 +9,5 @@ require_once "core/database.php";
 $database = new Database();
 // Connect to the database using the connect() method in the Database class
 $database->connect();
-// Connect to the database
+
 // $conn = $database->getConnection();
-// $database->getConnection();

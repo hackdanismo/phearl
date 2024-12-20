@@ -9,7 +9,10 @@ class Database {
 
     // Constructor initializes and creates the connection to the database
     public function __construct($host = null, $dbName = null, $username = null, $password = null) {
-        // Include the configuration file with the default database credentials
+        /* 
+        * Include the configuration file with the default database credentials.
+        * This will be ignored if values are passed into the Database class to provide the credentials.
+        */
         require_once __DIR__ . "/../config/config.php";
 
         // Use provided parameters or fallback to constants from the configuration file
