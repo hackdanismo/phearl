@@ -1,5 +1,5 @@
-# phearl
-A PHP Framework for building applications, websites and APIs. Released under the MIT Licence.
+# Phearl
+`Phearl` (pronounced /`fer-l`ː/) is a PHP Framework for building applications, websites and APIs. Released under the MIT Licence.
 
 ## Connect to the Database
 Credentials for the database can be found in the `config/config.php` configuration file. This file will contain the details for the `host`, `username`, `password` and `database name` to connect to the database.

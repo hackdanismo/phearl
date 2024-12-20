@@ -1,4 +1,7 @@
 <?php
+// Current framework version
+const PHEARL_VERSION = "0.0.0";
+
 // Database configuration
 
 /*
