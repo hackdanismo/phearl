@@ -13,6 +13,7 @@
 require_once "core/table.php";
 
 // Instantiate the Table class. This will connect to the database
-$table = new Table();
+// $table = new Table();    // No longer needed as this is now a static method
 // Create a table named "test-table" in the database
-$table->addTable("test-table");
+// $table->addTable("test-table");  // No longer needed as this is now a static method
+Table::addTable("test-db-table");

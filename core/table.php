@@ -4,14 +4,15 @@ require_once "database.php";
 
 class Table extends Database {
     // Method to create a new table in the database
-    public function addTable($tableName) {
+    public static function addTable($tableName) {
         // Ensure the table name is not empty and is a valid string
         if (empty($tableName) || !is_string($tableName)) {
             throw new InvalidArgumentException("Invalid table name.");
         }
 
-        // Connect to the database
-        $conn = $this->connect();
+        // Create a new instance of the Database class to connect to the database
+        $instance = new self();
+        $conn = $instance->connect();
 
         // Check if the table already exists
         $query = "SHOW TABLES LIKE :tableName";
