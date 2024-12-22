@@ -4,7 +4,7 @@ require_once "database.php";
 
 class Table extends Database {
     // Method to create a new table in the database
-    public static function addTable($tableName) {
+    public static function add($tableName) {
         // Ensure the table name is not empty and is a valid string
         if (empty($tableName) || !is_string($tableName)) {
             throw new InvalidArgumentException("Invalid table name.");
@@ -40,7 +40,7 @@ class Table extends Database {
     }
 
     // Method to delete/remove a table from the database
-    public static function deleteTable($tableName) {
+    public static function delete($tableName) {
         // Ensure the table name is not empty and is a valid string
         if (empty($tableName) || !is_string($tableName)) {
             throw new InvalidArgumentException("Invalid table name.");
