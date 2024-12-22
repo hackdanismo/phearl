@@ -17,3 +17,5 @@ require_once "core/table.php";
 // Create a table named "test-table" in the database
 // $table->addTable("test-table");  // No longer needed as this is now a static method
 Table::addTable("test-db-table");
+// Testing of the deleteTable method
+Table::deleteTable("test-table");
